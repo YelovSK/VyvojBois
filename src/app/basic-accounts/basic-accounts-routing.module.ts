@@ -5,7 +5,7 @@ import {TransactionDetailComponent} from "./transaction-detail/transaction-detai
 
 const routes: Routes = [
   { path: '', component: TransactionListComponent },
-  { path: '/detail', component: TransactionDetailComponent },
+  { path: ':transactionId', component: TransactionDetailComponent },
 ];
 
 @NgModule({
