@@ -4,19 +4,21 @@ import { CommonModule } from '@angular/common';
 import { BasicAccountsRoutingModule } from './basic-accounts-routing.module';
 import { TransactionListComponent } from './transaction-list/transaction-list.component';
 import { TransactionDetailComponent } from './transaction-detail/transaction-detail.component';
+import {TransactionTypePipe} from "./transaction-type.pipe";
 
 
 @NgModule({
   declarations: [
     TransactionListComponent,
-    TransactionDetailComponent
+    TransactionDetailComponent,
+    TransactionTypePipe
   ],
   exports: [
     TransactionListComponent
   ],
   imports: [
     CommonModule,
-    BasicAccountsRoutingModule
+    BasicAccountsRoutingModule,
   ]
 })
 export class BasicAccountsModule { }
