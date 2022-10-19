@@ -13,7 +13,8 @@ export class TransactionDetailComponent implements OnInit {
   transaction!: Transaction;
   private routeSub!: Subscription;
 
-  constructor(private route: ActivatedRoute, private transactionService: TransactionsService) { }
+  constructor(private route: ActivatedRoute, private transactionService: TransactionsService) {
+  }
 
   ngOnInit(): void {
     this.routeSub = this.route.params.subscribe(params => {
