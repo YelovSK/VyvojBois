@@ -3,13 +3,15 @@ import {HttpClient} from "@angular/common/http";
 import {map, Observable} from "rxjs";
 
 export interface Transaction {
-  transactionId: number;
-  fullName: string;
-  transactionType: number;
-  accountNumber: number;
-  bankCode: number;
-  issueDate: Date;
-  amount: number;
+  data: {
+    transactionId: number;
+    fullName: string;
+    transactionType: number;
+    accountNumber: number;
+    bankCode: number;
+    issueDate: Date;
+    amount: number;
+  }
 }
 
 interface TransactionDatas{

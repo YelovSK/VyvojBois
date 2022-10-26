@@ -7,7 +7,7 @@ import {Transaction} from "../services/transactions.service";
 export class TransactionTypePipe implements PipeTransform {
 
   transform(value: Transaction, ...args: unknown[]): unknown {
-    let id = value.transactionId;
+    let id = value.data.transactionId;
     switch (id) {
       case 0: return 'DEBIT transaction';
       case 1: return 'ATM withdrawal';
