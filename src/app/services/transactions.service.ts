@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {map, Observable} from "rxjs";
 
 export interface Transaction {
   transactionId: number;
@@ -12,6 +12,15 @@ export interface Transaction {
   amount: number;
 }
 
+interface TransactionDatas{
+  data: Transaction[];
+}
+
+interface TransactionData{
+  data: Transaction;
+}
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -22,10 +31,10 @@ export class TransactionsService {
   constructor(private http: HttpClient) { }
 
   getTransactions(): Observable<Transaction[]> {
-    return this.http.get<Transaction[]>(this.transactionUrl);
+    return this.http.get<TransactionDatas>(this.transactionUrl).pipe(map(x => x.data));
   }
 
   getTransaction(id: number): Observable<Transaction> {
-    return this.http.get<Transaction>(this.transactionUrl + '/' + id);
+    return this.http.get<TransactionData>(this.transactionUrl + '/' + id).pipe(map(x => x.data));
   }
 }
