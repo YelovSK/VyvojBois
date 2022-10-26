@@ -1,1 +1,13 @@
+<p>
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" [matMenuTriggerFor]="appMenu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #appMenu="matMenu">
+      <button mat-menu-item routerLink="basic-accounts">Basic Accounts</button>
+    </mat-menu>
+    <span>Internet banking</span>
+  </mat-toolbar>
+</p>
+
 <router-outlet></router-outlet>
