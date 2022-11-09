@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {Transaction, TransactionsService} from "../../services/transactions.service";
-import {RouterModule} from "@angular/router";
 
 @Component({
   selector: 'app-transaction-list',
@@ -18,15 +17,5 @@ export class TransactionListComponent implements OnInit {
     this.transactionService.getTransactions().subscribe(
       data => this.transactions = data
     );
-
-    this.transactionService.getTransaction(1).subscribe(
-      data => console.log(data)
-    );
   }
-
-  // showDetail(element: Transaction) {
-  //   let id = element.transactionId;
-  //   this.router.navigate(['/transaction-detail', id]);
-  //   window.location.href = '/basic-accounts/transaction-detail/' + id;
-  // }
 }

@@ -1,2 +1,20 @@
-<mat-card>{{Id}}</mat-card>
-<mat-card>{{transaction.transactionType | transactionType}}</mat-card>
+<form [formGroup]="form">
+  <mat-form-field>
+    <mat-label>Transaction</mat-label>
+    <input matInput id="accountNumber" type="text" formControlName="accountNumber">
+  </mat-form-field>
+  
+  <br>
+  
+  <mat-form-field>
+    <mat-label>Issue date</mat-label>
+    <input matInput id="issueDate" type="text" formControlName="issueDate">
+  </mat-form-field>
+  
+  <br>
+  
+  <mat-form-field>
+    <mat-label>Amount</mat-label>
+    <input matInput id="amount" type="text" formControlName="amount">
+  </mat-form-field>
+</form>

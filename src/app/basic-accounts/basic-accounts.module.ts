@@ -6,6 +6,7 @@ import {TransactionListComponent} from './transaction-list/transaction-list.comp
 import {TransactionDetailComponent} from './transaction-detail/transaction-detail.component';
 import {TransactionTypePipe} from "./transaction-type.pipe";
 import {MaterialModule} from "../material/material.module";
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -17,11 +18,12 @@ import {MaterialModule} from "../material/material.module";
   exports: [
     TransactionListComponent
   ],
-  imports: [
-    CommonModule,
-    BasicAccountsRoutingModule,
-    MaterialModule
-  ]
+    imports: [
+        CommonModule,
+        BasicAccountsRoutingModule,
+        MaterialModule,
+        ReactiveFormsModule
+    ]
 })
 export class BasicAccountsModule {
 }

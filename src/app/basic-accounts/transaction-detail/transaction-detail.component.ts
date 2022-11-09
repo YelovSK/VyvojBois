@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {Subscription} from "rxjs";
 import {Transaction, TransactionsService} from "../../services/transactions.service";
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-transaction-detail',
@@ -11,6 +12,11 @@ import {Transaction, TransactionsService} from "../../services/transactions.serv
 export class TransactionDetailComponent implements OnInit {
   Id: number = -1;
   transaction!: Transaction;
+  form = new FormGroup({
+    accountNumber: new FormControl(),
+    amount: new FormControl(),
+    issueDate: new FormControl()
+  });
   private routeSub!: Subscription;
 
   constructor(private route: ActivatedRoute, private transactionService: TransactionsService) {
@@ -24,8 +30,14 @@ export class TransactionDetailComponent implements OnInit {
     this.transactionService.getTransaction(this.Id).subscribe(
       data => {
         this.transaction = data;
+        this.form.setValue({
+          accountNumber: this.transaction.accountNumber ?? "",
+          amount: this.transaction.amount ?? "",
+          issueDate: this.transaction.issueDate ?? ""
+        });
       }
     );
+
   }
 
 }
