@@ -10,14 +10,14 @@ import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
-  declarations: [
-    TransactionListComponent,
-    TransactionDetailComponent,
-    TransactionTypePipe
-  ],
-  exports: [
-    TransactionListComponent
-  ],
+    declarations: [
+        TransactionListComponent,
+        TransactionDetailComponent,
+        TransactionTypePipe
+    ],
+    exports: [
+        TransactionListComponent
+    ],
     imports: [
         CommonModule,
         BasicAccountsRoutingModule,

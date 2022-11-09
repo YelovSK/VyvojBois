@@ -1,20 +1,20 @@
 <form [formGroup]="form">
-  <mat-form-field>
-    <mat-label>Transaction</mat-label>
-    <input matInput id="accountNumber" type="text" formControlName="accountNumber">
-  </mat-form-field>
+    <mat-form-field>
+        <mat-label>Transaction</mat-label>
+        <input formControlName="accountNumber" id="accountNumber" matInput type="text">
+    </mat-form-field>
   
-  <br>
-  
-  <mat-form-field>
-    <mat-label>Issue date</mat-label>
-    <input matInput id="issueDate" type="text" formControlName="issueDate">
-  </mat-form-field>
-  
-  <br>
-  
-  <mat-form-field>
-    <mat-label>Amount</mat-label>
-    <input matInput id="amount" type="text" formControlName="amount">
-  </mat-form-field>
+    <br>
+
+    <mat-form-field>
+        <mat-label>Issue date</mat-label>
+        <input formControlName="issueDate" id="issueDate" matInput type="text">
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field>
+        <mat-label>Amount</mat-label>
+        <input formControlName="amount" id="amount" matInput type="text">
+    </mat-form-field>
 </form>
