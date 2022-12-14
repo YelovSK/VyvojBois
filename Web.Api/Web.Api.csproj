@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.0" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.3.1" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0-alpha.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="WebClient\src\app\app-routing.module.ts" />
+    <TypeScriptCompile Include="WebClient\src\app\app.component.ts" />
+    <TypeScriptCompile Include="WebClient\src\app\app.module.ts" />
+    <TypeScriptCompile Include="WebClient\src\app\basic-accounts\basic-accounts-routing.module.ts" />
+    <TypeScriptCompile Include="WebClient\src\app\basic-accounts\basic-accounts.module.ts" />
+    <TypeScriptCompile Include="WebClient\src\app\basic-accounts\transaction-detail\transaction-detail.component.ts" />
+    <TypeScriptCompile Include="WebClient\src\app\basic-accounts\transaction-list\transaction-list.component.ts" />
+    <TypeScriptCompile Include="WebClient\src\app\basic-accounts\transaction-type.pipe.ts" />
+    <TypeScriptCompile Include="WebClient\src\app\dashboard\dashboard.component.spec.ts" />
+    <TypeScriptCompile Include="WebClient\src\app\dashboard\dashboard.component.ts" />
+    <TypeScriptCompile Include="WebClient\src\app\material\material.module.ts" />
+    <TypeScriptCompile Include="WebClient\src\app\services\transactions.service.ts" />
+    <TypeScriptCompile Include="WebClient\src\environments\environment.prod.ts" />
+    <TypeScriptCompile Include="WebClient\src\environments\environment.ts" />
+    <TypeScriptCompile Include="WebClient\src\main.ts" />
+    <TypeScriptCompile Include="WebClient\src\polyfills.ts" />
+    <TypeScriptCompile Include="WebClient\src\test.ts" />
+  </ItemGroup>
+
+</Project>
